@@ -20,7 +20,7 @@ age = st.slider('Select your age:', 0, 100, 25)
 predict_clicked=st.button("Get the prediction")
 
 if predict_clicked==True:
-    model=pickle.load(open(".\Diabetes\Model_Development\lr.pkl", 'rb'))
+    model=pickle.load(open("/Diabetes/Model_Development/lr.pkl", 'rb'))
     
     #calling the model
 
@@ -38,6 +38,7 @@ if predict_clicked==True:
 
     #display the predicted price on the webpage
     
+
 
 
 
