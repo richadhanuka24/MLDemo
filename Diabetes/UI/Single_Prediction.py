@@ -20,14 +20,14 @@ age = st.slider('Select your age:', 0, 100, 25)
 predict_clicked=st.button("Get the prediction")
 
 if predict_clicked==True:
-    #model=pickle.load(open("../Diabetes/Model_Development/lr.pkl", 'rb'))
+    model=pickle.load(open("../Diabetes/Model_Development/lr.pkl", 'rb'))
+    '''
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # goes to Diabetes/
     model_path = os.path.join(BASE_DIR, "Model_Development", "lr.pkl")
 
     with open(model_path, "rb") as f:
         model = pickle.load(f)
-    
-    #calling the model
+    '''
 
     #load the test data into numpy array
     data=[np.array([preg,glucose,blood_pressure,skin,insulin,bmi,pedigreefn,age])]
